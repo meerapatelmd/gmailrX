@@ -47,7 +47,7 @@ get_standard_labels <-
                 tibble::tibble(label_id = unlist(gmail_labels_id),
                                        label = unlist(gmail_labels_name)) %>%
                         rubix::filter_for(label_id,
-                                          inclusion_vector = label_map$label_id,
+                                          vector = label_map$label_id,
                                           invert = TRUE)
 
         }

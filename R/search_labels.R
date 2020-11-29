@@ -44,8 +44,8 @@ search_labels <-
 
                 label_ids <-
                         label_map %>%
-                        rubix::filter_for(filter_col = label,
-                                          inclusion_vector = Args) %>%
+                        rubix::filter_for(col = label,
+                                          vector = Args) %>%
                         dplyr::select(label_id, label) %>%
                         dplyr::distinct()
 

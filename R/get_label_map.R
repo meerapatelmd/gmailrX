@@ -68,8 +68,8 @@ get_label_map <-
 
                 parent_label_map <-
                         gmail_labels_map %>%
-                        rubix::filter_for(filter_col = label,
-                                          inclusion_vector = unique_parent_labels) %>%
+                        rubix::filter_for(col = label,
+                                          vector = unique_parent_labels) %>%
                         dplyr::filter_at(vars(parent_label,
                                               child_label,
                                               grandchild_label),
@@ -137,8 +137,8 @@ get_label_map <-
                 output_part_2 <-
                 tibble::tibble(label_id = unlist(gmail_labels_id),
                                label = unlist(gmail_labels_name)) %>%
-                        rubix::filter_for(label_id,
-                                          inclusion_vector = label_map$label_id,
+                        rubix::filter_for(col = label_id,
+                                          vector = label_map$label_id,
                                           invert = TRUE) %>%
                         dplyr::transmute(label_path = label,
                                          label_type = "standard",
