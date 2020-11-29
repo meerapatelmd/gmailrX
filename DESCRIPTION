@@ -1,16 +1,24 @@
 Package: gmailrX
-Title: What the Package Does (One Line, Title Case)
+Title: Organize Gmail
 Version: 0.0.0.9000
-Authors@R: 
-    person(given = "First",
-           family = "Last",
-           role = c("aut", "cre"),
-           email = "first.last@example.com",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to
-    pick a license
+Authors@R: person("Meera", "Patel, MD", email = "patelmeeray@gmail.com", role = c("aut", "cre"),
+                          comment = c(ORCID = "0000-0002-3401-3948")) 
+Description: Sort and organize gmail based on labels.
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
+Imports: 
+    dplyr,
+    gmailr,
+    magrittr,
+    purrr,
+    rlang,
+    rubix,
+    tibble,
+    tidyr
+Remotes:  
+    meerapatelmd/rubix
+URL: https://meerapatelmd.github.io/gmailrX/, https://github.com/meerapatelmd/gmailrX/
+BugReports: https://github.com/meerapatelmd/gmailrX/issues/
